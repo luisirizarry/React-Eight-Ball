@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import BallAnswers from './BallAnswers';
+import "./EightBall.css"
 
 const EightBall = () => {
     const generateRandomIndex = () => Math.floor(Math.random() * BallAnswers.length);
@@ -22,9 +23,9 @@ const EightBall = () => {
 
     return (
         <>
-            <span className='EightBall' onClick={() => shakeBall()} style={{ backgroundColor: ballColor }}>
+            <div className='EightBall' onClick={() => shakeBall()} style={{ backgroundColor: ballColor, color: 'white' }}>
                 <p className='EightBallMsg'>{ballMessage}</p>
-            </span>
+            </div>
             <button onClick={resetBall}>Reset</button>
         </>
     )
